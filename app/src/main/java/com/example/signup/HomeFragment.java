@@ -43,8 +43,12 @@ public class HomeFragment extends Fragment {
         imageCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(getActivity(),ImageActivity.class);
-                startActivity(intent);
+                if(MainActivity.user == null){
+                    ((MainActivity)getActivity()).signIn();
+                }else{
+                    Intent intent= new Intent(getActivity(),ImageActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 
