@@ -256,7 +256,7 @@ public class ImageActivity extends AppCompatActivity {
                                     Upload upload = new Upload(mEditTextFileName.getText().toString().trim(),
                                             uri.toString());
 
-                                    //Total Cost
+                                    //Total Cost/
                                     if(mEditTextFileName.getText().toString().trim().length()==0){
                                         overToatalPrice=overToatalPrice+2;
                                     }else {
